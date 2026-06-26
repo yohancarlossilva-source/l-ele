@@ -1,31 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Conexão 1: Menu Hamburguer Mobile
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+// Elementos capturados do HTML
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
 
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+    // 1. Controle do Menu Mobile (Abrir / Fechar)
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');  // Abre a cortina do menu
+            menuToggle.classList.toggle('open');  // Transforma as barras em X
+        });
+
+        // Fecha o menu se clicar em qualquer link (essencial para usabilidade mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('open');
+            });
+        });
+    }
+
+    // 2. Animação da Navbar baseada no Scroll da tela
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled'); // Encolhe e adiciona sombra
+        } else {
+            navbar.classList.remove('navbar-scrolled'); // Volta ao estado original
+        }
     });
 
-    // Conexão 2: Botão de Teste do Banner (Altera o CSS via JS)
-    const btnAlerta = document.getElementById('btn-alerta');
-    btnAlerta.addEventListener('click', () => {
-        // Alerta na tela provando que o JS está rodando
-        alert("Sucesso! O arquivo script.js está conectado e funcionando!");
-        
-        // Altera a cor de fundo do cabeçalho diretamente para provar a conexão com o visual
-        const header = document.getElementById('main-header');
-        header.style.backgroundColor = '#27ae60';
-        document.getElementById('logo-site').style.color = '#ffffff';
+    // 3. Clique nos Cards de Solução (Preparação para features futuras)
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const servico = card.querySelector('h3').innerText;
+            console.log(`Você clicou no serviço: ${servico}`);
+            // Espaço reservado para abrir modais ou carregar dados dinamicamente
+        });
     });
 
-    // Conexão 3: Interceptação do Formulário
-    const formulario = document.getElementById('contactForm');
-    formulario.addEventListener('submit', (evento) => {
-        evento.preventDefault(); // Não deixa a página recarregar
-        const nomeDigitado = document.getElementById('nome').value;
-        alert(`Obrigado, ${nomeDigitado}! O formulário capturou seu nome com sucesso.`);
-        formulario.reset();
-    });
 });
