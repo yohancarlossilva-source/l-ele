@@ -3,48 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroTech - Inovação no Campo</title>
-    
+    <title>AgroTech | Inteligência no Campo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="main-header">
-        <div class="container header-container">
-            <div class="logo" id="logo-site">Agro<span>Tech</span></div>
-            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-            <nav id="nav-menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Agro<span>Tech</span></a>
+           
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#contato" class="btn-nav">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero" id="inicio">
         <div class="hero-content">
-            <h1>Tecnologia no Campo</h1>
-            <p>Conectando inovação ao produtor rural.</p>
-            <button class="btn" id="btn-alerta">Testar Conexão do Script</button>
+            <h2>O futuro da agropecuária é inteligente.</h2>
+            <p>Otimize sua produção, monitore seu rebanho e tome decisões baseadas em dados com a nossa plataforma.</p>
+            <div class="hero-cta">
+                <a href="#solucoes" class="btn btn-primary">Começar Agora</a>
+                <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
+            </div>
         </div>
     </section>
 
-    <section id="sobre" class="container section">
-        <h2>Sobre o Projeto</h2>
-        <p>Se você está lendo isso com fundo verde e letras organizadas, o CSS funcionou perfeitamente!</p>
+    <section class="solutions" id="solucoes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossas Soluções</h2>
+                <p>Tecnologia de ponta simplificada para o pequeno, médio e grande produtor.</p>
+            </div>
+           
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Gestão de Cultivos</h3>
+                    <p>Controle de safra, manejo de solo e relatórios de produtividade em poucos cliques.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐂</div>
+                    <h3>Pecuária de Precisão</h3>
+                    <p>Rastreamento, histórico de vacinação e controle de ganho de peso do rebanho.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Análise de Dados</h3>
+                    <p>Previsão do tempo integrada e gráficos financeiros para proteger sua margem de lucro.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contato" class="container section">
-        <h2>Contato</h2>
-        <form id="contactForm" class="contact-form">
-            <input type="text" id="nome" placeholder="Seu Nome" required>
-            <button type="submit" class="btn">Enviar e Testar Script</button>
-        </form>
-    </section>
-
-    <footer>
+    <footer class="footer">
         <p>&copy; 2026 AgroTech. Todos os direitos reservados.</p>
     </footer>
 
