@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech - Inovação no Campo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="container header-container">
+            <div class="logo">Agro<span>Tech</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                &#9776;
+            </button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>O Futuro do Agronegócio é Sustentável</h1>
+            <p>Tecnologia e inovação para aumentar a produtividade da sua lavoura.</p>
+            <a href="#servicos" class="btn">Conhecer Soluções</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container section">
+        <h2>Sobre Nós</h2>
+        <p>A AgroTech nasceu com a missão de conectar o produtor rural às melhores tecnologias de cultivo, gestão e monitoramento, garantindo uma colheita mais eficiente e ecologicamente correta.</p>
+    </section>
+
+    <section id="servicos" class="services-section">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Monitoramento via Satélite</h3>
+                    <p>Acompanhe a saúde da sua lavoura em tempo real com dados precisos.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gestão de Safra</h3>
+                    <p>Softwares inteligentes para controlar custos, insumos e previsões.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consultoria Agronômica</h3>
+                    <p>Suporte especializado para otimizar o manejo do solo e combate a pragas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container section">
+        <h2>Fale Conosco</h2>
+        <p>Tem alguma dúvida? Entre em contato com a nossa equipe de especialistas.</p>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AgroTech. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
